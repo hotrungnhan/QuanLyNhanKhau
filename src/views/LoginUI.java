@@ -13,9 +13,9 @@ import javax.swing.SwingUtilities;
  * @author Hai
  */
 public class LoginUI extends javax.swing.JFrame {
-    
-    private LoginController cont = new  LoginController();
-    
+
+    private LoginController cont = new LoginController();
+
     public LoginUI() {
         initComponents();
         setLocationRelativeTo(null);
@@ -24,7 +24,7 @@ public class LoginUI extends javax.swing.JFrame {
         keyListenner(txbUserName);
         keyListenner(txbPasswd);
     }
-    
+
     // xu ly su kien nhan enter
     private void keyListenner(JTextField jtf) {
         jtf.addKeyListener(new KeyAdapter() {
@@ -35,7 +35,7 @@ public class LoginUI extends javax.swing.JFrame {
                     login();
                 }
             }
-        }); 
+        });
     }
 
     // dang nhap
@@ -50,13 +50,13 @@ public class LoginUI extends javax.swing.JFrame {
                 mainFrame.setResizable(false);
                 mainFrame.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(rootPane, "Sai thong tin dang nhap", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Sai Thông tin đăng nhập", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         } catch (SQLException | ClassNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Có lỗi xảy ra!! Vui lòng kiểm tra lại!", "Warning!!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Không tìm thấy cơ sở dữ liệu", "Warning!!", JOptionPane.ERROR_MESSAGE);
         }
     }
-            
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -211,11 +211,11 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_txbUserNameActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-       this.login();
+        this.login();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
-        
+
     }//GEN-LAST:event_btnLoginMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
