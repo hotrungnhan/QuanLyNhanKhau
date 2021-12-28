@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Hai
+ * @author Nhan
  */
 public class DanhMucBean {
     private String kind;

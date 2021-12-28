@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author User
+ * @author Bao
  */
 public class ChuyenDiNoiKhac extends javax.swing.JFrame {
 

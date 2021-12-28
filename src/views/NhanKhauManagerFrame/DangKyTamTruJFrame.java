@@ -14,7 +14,7 @@ import models.TamTruModel;
 
 /**
  *
- * @author Hai
+ * @author Bao
  */
 public class DangKyTamTruJFrame extends javax.swing.JFrame {
 

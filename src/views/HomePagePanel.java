@@ -4,7 +4,7 @@ import controllers.HomeCotroller;
 
 /**
  *
- * @author Ai làm thì điền tên vào
+ * @author Bao
  */
 public class HomePagePanel extends javax.swing.JPanel {
 

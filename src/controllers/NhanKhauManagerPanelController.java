@@ -25,10 +25,10 @@ import views.infoViews.InfoJframe;
 
 /**
  *
- * @author Hai
+ * @author Nhan
  */
 public class NhanKhauManagerPanelController {
-    
+
     private JPanel jpnView;
     private JTextField jtfSearch;
     private NhanKhauService nhanKhauService;
@@ -48,10 +48,9 @@ public class NhanKhauManagerPanelController {
 
     public NhanKhauManagerPanelController() {
     }
-    
-    
+
     //
-    public void initAction(){
+    public void initAction() {
         this.jtfSearch.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -75,7 +74,7 @@ public class NhanKhauManagerPanelController {
             }
         });
     }
-    
+
     public void setDataTable() {
         List<NhanKhauModel> listItem = new ArrayList<>();
         this.listNhanKhauBeans.forEach(nhankhau -> {
@@ -87,11 +86,10 @@ public class NhanKhauManagerPanelController {
             public boolean editCellAt(int row, int column, EventObject e) {
                 return false;
             }
-            
+
         };
-        
+
         // thiet ke bang
-        
         table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
         table.getTableHeader().setPreferredSize(new Dimension(100, 50));
         table.setRowHeight(50);
@@ -113,9 +111,8 @@ public class NhanKhauManagerPanelController {
                     infoJframe.setVisible(true);
                 }
             }
-            
         });
-        
+
         JScrollPane scroll = new JScrollPane();
         scroll.getViewport().add(table);
         scroll.setPreferredSize(new Dimension(1350, 400));
@@ -129,11 +126,12 @@ public class NhanKhauManagerPanelController {
     public void setParentJFrame(JFrame parentJFrame) {
         this.parentJFrame = parentJFrame;
     }
-    
+
     public void refreshData() {
         this.listNhanKhauBeans = this.nhanKhauService.getListNhanKhau();
         setDataTable();
     }
+
     public JPanel getJpnView() {
         return jpnView;
     }
@@ -149,6 +147,5 @@ public class NhanKhauManagerPanelController {
     public void setJtfSearch(JTextField jtfSearch) {
         this.jtfSearch = jtfSearch;
     }
-    
-    
+
 }

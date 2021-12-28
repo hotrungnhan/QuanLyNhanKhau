@@ -13,7 +13,7 @@ import models.NhanKhauModel;
 
 /**
  *
- * @author Hai
+ * @author Bao
  */
 public class AddNewPeopleJFrame extends javax.swing.JFrame {
 

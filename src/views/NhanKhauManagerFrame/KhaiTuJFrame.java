@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Hai
+ * @author Bao
  */
 public class KhaiTuJFrame extends javax.swing.JFrame {
 

@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  *
- * @author Hai
+ * @author Nhan
  */
 public class TieuSuModel {
     private int ID;

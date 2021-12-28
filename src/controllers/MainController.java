@@ -17,11 +17,12 @@ import views.HoKhauManagePanel;
 import views.HomePagePanel;
 import views.NhanKhauManagePanel;
 import views.ThongKePanel;
+import views.TimGiayPanel;
 import views.TimKiemPanel;
 
 /**
  *
- * @author Hai
+ * @author Nhan
  */
 public class MainController {
 
@@ -34,6 +35,7 @@ public class MainController {
         this.jfrMain = jfrMain;
         this.root = root;
     }
+
     // set panel for root
     public void setView(JPanel jpnItem, JLabel jlbItem, String kind) {
         this.kindSelected = kind;
@@ -56,6 +58,8 @@ public class MainController {
             case "ThongKe":
                 view = new ThongKePanel(this.jfrMain);
                 break;
+            case "TimGiay":
+                view = new TimGiayPanel(this.jfrMain);
         }
         root.removeAll();
         root.setLayout(new BorderLayout());
@@ -123,8 +127,9 @@ public class MainController {
                 case "ThongKe":
                     view = new ThongKePanel(this.jfrMain);
                     break;
+                case "TimGiay":
+                    view = new TimGiayPanel(this.jfrMain);
             }
-
             root.removeAll();
             root.setLayout(new BorderLayout());
             root.add(view);

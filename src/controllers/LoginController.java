@@ -10,7 +10,7 @@ import services.MysqlConnection;
 
 /**
  *
- * @author Hai
+ * @author Nhan
  */
 public class LoginController {
     

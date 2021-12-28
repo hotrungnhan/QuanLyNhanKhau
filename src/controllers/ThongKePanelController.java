@@ -20,12 +20,12 @@ import services.NhanKhauService;
 import services.StringService;
 import utility.ClassTableModel;
 
-
 /**
  *
- * @author Hai
+ * @author Nhan
  */
 public class ThongKePanelController {
+
     private JComboBox GenderJcb;
     private JComboBox StatusJcb;
     private JTextField tuTuoiJtf;
@@ -51,7 +51,7 @@ public class ThongKePanelController {
         this.listNhanKhauBeans = this.nhanKhauService.getListNhanKhau();
         this.classTableModel = new ClassTableModel();
     }
-    
+
     public JPanel getJpnView() {
         return jpnView;
     }
@@ -65,8 +65,8 @@ public class ThongKePanelController {
         int denTuoi = 200;
         int tuNam = 0;
         int denNam = 2100;
-        String gender = StringService.covertToString((String)this.GenderJcb.getSelectedItem());
-        String status = StringService.covertToString((String)this.StatusJcb.getSelectedItem());
+        String gender = StringService.covertToString((String) this.GenderJcb.getSelectedItem());
+        String status = StringService.covertToString((String) this.StatusJcb.getSelectedItem());
         try {
             if (!this.tuTuoiJtf.getText().trim().isEmpty()) {
                 tuTuoi = Integer.parseInt(this.tuTuoiJtf.getText().trim());
@@ -88,9 +88,10 @@ public class ThongKePanelController {
             JOptionPane.showMessageDialog(denTuoiJtf, "Vui lòng nhập đúng kiểu dữ liệu!!", "Warring", JOptionPane.ERROR_MESSAGE);
         }
         this.listNhanKhauBeans = this.nhanKhauService.statisticNhanKhau(tuTuoi, denTuoi, gender, status, tuNam, denNam);
+        System.err.println(this.listNhanKhauBeans.toString());
         setDataTable();
     }
-    
+
     public void setDataTable() {
         List<NhanKhauModel> listItem = new ArrayList<>();
         this.listNhanKhauBeans.forEach(nhankhau -> {
@@ -98,9 +99,8 @@ public class ThongKePanelController {
         });
         DefaultTableModel model = classTableModel.setTableNhanKhau(listItem, COLUMNS);
         JTable table = new JTable(model);
-        
+
         // thiet ke bang
-        
         table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
         table.getTableHeader().setPreferredSize(new Dimension(100, 50));
         table.setRowHeight(50);
@@ -110,7 +110,7 @@ public class ThongKePanelController {
         table.getColumnModel().getColumn(0).setMaxWidth(80);
         table.getColumnModel().getColumn(0).setMinWidth(80);
         table.getColumnModel().getColumn(0).setPreferredWidth(80);
-        
+
         JScrollPane scroll = new JScrollPane();
         scroll.getViewport().add(table);
         scroll.setPreferredSize(new Dimension(1350, 400));
@@ -168,6 +168,5 @@ public class ThongKePanelController {
     public void setDenNamJtf(JTextField denNamJtf) {
         this.denNamJtf = denNamJtf;
     }
-    
-    
+
 }

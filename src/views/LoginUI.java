@@ -10,7 +10,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author Hai
+ * @author Bao
  */
 public class LoginUI extends javax.swing.JFrame {
 

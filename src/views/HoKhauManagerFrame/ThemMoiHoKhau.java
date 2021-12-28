@@ -14,7 +14,7 @@ import models.ThanhVienCuaHoModel;
 
 /**
  *
- * @author User
+ * @author Bao
  */
 public class ThemMoiHoKhau extends javax.swing.JFrame {
 

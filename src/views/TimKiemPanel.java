@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Ai làm thì điền tên vào
+ * @author Bao
  */
 public class TimKiemPanel extends javax.swing.JPanel {
     private JFrame parentFrame;

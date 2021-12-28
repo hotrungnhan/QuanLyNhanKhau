@@ -7,7 +7,7 @@ package models;
 
 /**
  *
- * @author ADMIN
+ * @author Nhan
  */
 public class ThangModel {
     

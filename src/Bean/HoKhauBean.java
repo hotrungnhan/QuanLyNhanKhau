@@ -8,7 +8,7 @@ import models.ThanhVienCuaHoModel;
 
 /**
  *
- * @author Hai
+ * @author Nhan
  * ket noi tu nhien gia ho_khau va nhan_khau
  */
 

@@ -22,15 +22,16 @@ import views.infoViews.InfoJframe;
 
 /**
  *
- * @author Hai
+ * @author Nhan
  */
 public class HoKhauPanelController {
+
     private List<HoKhauBean> list;
     private JTextField searchJtf;
     private JPanel tableJpn;
     private final HoKhauService hoKhauService = new HoKhauService();
     private final TableModelHoKhau tableModelHoKhau = new TableModelHoKhau();
-    private final String COLUNMS[] = {"Mã hộ khẩu", "Họ tên chủ hộ", "Địa chỉ"}; 
+    private final String COLUNMS[] = {"Mã hộ khẩu", "Họ tên chủ hộ", "Địa chỉ"};
     private JFrame parentJFrame;
 
     public HoKhauPanelController(JTextField searchJtf, JPanel tableJpn) {
@@ -40,7 +41,7 @@ public class HoKhauPanelController {
         setData();
         initAction();
     }
-    
+
     public void initAction() {
         this.searchJtf.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -80,13 +81,11 @@ public class HoKhauPanelController {
 
     public void setData() {
         DefaultTableModel model = tableModelHoKhau.setTableHoKhau(list, COLUNMS);
-        
         JTable table = new JTable(model) {
             @Override
             public boolean editCellAt(int row, int column, EventObject e) {
                 return false;
             }
-            
         };
         table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
         table.getTableHeader().setPreferredSize(new Dimension(100, 50));
@@ -104,9 +103,9 @@ public class HoKhauPanelController {
                     infoJframe.setVisible(true);
                 }
             }
-            
+
         });
-        
+
         JScrollPane scroll = new JScrollPane();
         scroll.getViewport().add(table);
         tableJpn.removeAll();
@@ -119,7 +118,7 @@ public class HoKhauPanelController {
     public void setParentJFrame(JFrame parentJFrame) {
         this.parentJFrame = parentJFrame;
     }
-    
+
     public List<HoKhauBean> getList() {
         return list;
     }
@@ -143,5 +142,5 @@ public class HoKhauPanelController {
     public void setTableJpn(JPanel tableJpn) {
         this.tableJpn = tableJpn;
     }
-    
+
 }
