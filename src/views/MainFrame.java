@@ -32,7 +32,6 @@ public class MainFrame extends javax.swing.JFrame {
         listDanhMuc.add(new DanhMucBean("HoKhau", HoKhauBtn, jlbHoKhau));
         listDanhMuc.add(new DanhMucBean("ThongKe", ThongKeBtn, jlbThongKe));
         listDanhMuc.add(new DanhMucBean("TimGiay", TimGiayBtn, jlbTimGiay));
-
         MainController controller = new MainController(jpnBean, this);
         controller.setView(Home, jblTrangChu, "TrangChu");
         controller.setEvent(listDanhMuc);
@@ -70,6 +69,8 @@ public class MainFrame extends javax.swing.JFrame {
         jlbThongKe = new javax.swing.JLabel();
         TimGiayBtn = new javax.swing.JPanel();
         jlbTimGiay = new javax.swing.JLabel();
+        DangXuatBtn = new javax.swing.JPanel();
+        jlbDangXuat = new javax.swing.JLabel();
         jpnBean = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -199,6 +200,35 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        DangXuatBtn.setBackground(new java.awt.Color(102, 102, 102));
+        DangXuatBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DangXuatBtnMouseClicked(evt);
+            }
+        });
+
+        jlbDangXuat.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlbDangXuat.setForeground(new java.awt.Color(255, 255, 255));
+        jlbDangXuat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/logout.png"))); // NOI18N
+        jlbDangXuat.setText("Đăng xuất");
+
+        javax.swing.GroupLayout DangXuatBtnLayout = new javax.swing.GroupLayout(DangXuatBtn);
+        DangXuatBtn.setLayout(DangXuatBtnLayout);
+        DangXuatBtnLayout.setHorizontalGroup(
+            DangXuatBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DangXuatBtnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlbDangXuat)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        DangXuatBtnLayout.setVerticalGroup(
+            DangXuatBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DangXuatBtnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlbDangXuat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jpnMenuLayout = new javax.swing.GroupLayout(jpnMenu);
         jpnMenu.setLayout(jpnMenuLayout);
         jpnMenuLayout.setHorizontalGroup(
@@ -207,6 +237,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jpnMenuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpnMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DangXuatBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(NhanKhauBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(HoKhauBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ThongKeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -224,7 +255,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(ThongKeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(TimGiayBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 33, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(DangXuatBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 36, Short.MAX_VALUE))
         );
 
         TimGiayBtn.getAccessibleContext().setAccessibleName("");
@@ -272,13 +305,24 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void DangXuatBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DangXuatBtnMouseClicked
+        // TODO add your handling code here:               
+        this.dispose();
+        LoginUI mainFrame = new LoginUI();
+        mainFrame.setLocationRelativeTo(null);
+        mainFrame.setResizable(false);
+        mainFrame.setVisible(true);
+    }//GEN-LAST:event_DangXuatBtnMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel DangXuatBtn;
     private javax.swing.JPanel HoKhauBtn;
     private javax.swing.JPanel Home;
     private javax.swing.JPanel NhanKhauBtn;
     private javax.swing.JPanel ThongKeBtn;
     private javax.swing.JPanel TimGiayBtn;
     private javax.swing.JLabel jblTrangChu;
+    private javax.swing.JLabel jlbDangXuat;
     private javax.swing.JLabel jlbHoKhau;
     private javax.swing.JLabel jlbNhanKhau;
     private javax.swing.JLabel jlbThongKe;

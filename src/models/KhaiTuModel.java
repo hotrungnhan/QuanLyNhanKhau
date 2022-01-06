@@ -7,6 +7,7 @@ import java.util.Date;
  * @author Nhan
  */
 public class KhaiTuModel {
+
     private int ID;
     private String soGiayKhaiTu;
     private int idNguoiKhai;
@@ -70,6 +71,4 @@ public class KhaiTuModel {
     public void setLyDoChet(String lyDoChet) {
         this.lyDoChet = lyDoChet;
     }
-    
-    
 }

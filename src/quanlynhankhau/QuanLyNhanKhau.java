@@ -12,8 +12,8 @@ import views.MainFrame;
 public class QuanLyNhanKhau {
 
     public static Calendar calendar = Calendar.getInstance();
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
@@ -23,7 +23,7 @@ public class QuanLyNhanKhau {
 //        mainFrame.setResizable(false);
 //        mainFrame.setVisible(true);
         LoginUI loginUI = new LoginUI();
-        loginUI.setVisible(true); 
+        loginUI.setVisible(true);
     }
-    
+
 }
