@@ -24,7 +24,7 @@ import utility.TableModelHoKhau;
 
 /**
  *
- * @author Hai
+ * @author Bao
  */
 public class ChangeListPeopleController {
     

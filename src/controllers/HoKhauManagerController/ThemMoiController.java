@@ -18,7 +18,7 @@ import utility.TableModelHoKhau;
 
 /**
  *
- * @author Hai
+ * @author Bao
  */
 public class ThemMoiController {
     private NhanKhauBean chuHo;

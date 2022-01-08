@@ -13,7 +13,7 @@ import services.MysqlConnection;
 
 /**
  *
- * @author Hai
+ * @author Bao
  */
 
 // lop thuc hien cac chuc nang trong giao dien them moi nhan khau

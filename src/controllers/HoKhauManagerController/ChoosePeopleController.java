@@ -22,7 +22,7 @@ import utility.TableModelHoKhau;
 
 /**
  *
- * @author Hai
+ * @author Nhan
  */
 public class ChoosePeopleController {
     private NhanKhauBean nhanKhauBean;
@@ -97,7 +97,7 @@ public class ChoosePeopleController {
             public void mouseClicked(MouseEvent e) {
 //                JOptionPane.showConfirmDialog(null, table.getSelectedRow());
                 if (e.getClickCount() > 1) {
-                    JOptionPane.showMessageDialog(null, "aa");
+//                    JOptionPane.showMessageDialog(null, "aa");
                 }
                 NhanKhauBean temp = list.get(table.getSelectedRow());
                 if (hoKhauService.checkPerson(temp.getNhanKhauModel().getID())) {

@@ -9,7 +9,7 @@ import services.MysqlConnection;
 
 /**
  *
- * @author Hai
+ * @author Bao
  */
 public class DangKyTamVangController {
     

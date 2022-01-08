@@ -11,7 +11,7 @@ import models.TieuSuModel;
 
 /**
  *
- * @author Hai class dinh nghia cac dang table co trong phan mem
+ * @author Bao class dinh nghia cac dang table co trong phan mem
  */
 public class ClassTableModel {
 
